@@ -1,0 +1,36 @@
+:root {
+  --base-color: #242424;
+  --header-text-color: #fff;
+  --light-white-color: #f9f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+button {
+  font-family: inherit;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+}
+
+a:link,
+:visited {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.hidden {
+  display: none;
+}

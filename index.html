@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <script type="module" src="src/js/controller.js"></script>
+
+    <title>eShop</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logo-name" href=""
+        ><img class="header__logo" src="/src/img/logo.png" alt="logo" />
+        <h2 class="header__name">eShop</h2>
+      </a>
+      <nav class="header__menu">
+        <a href="" class="header__link header__login">log in</a>
+        <a href="#cart" class="header__link header__cart">
+          <svg
+            class="header__cart-image"
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <circle
+              cx="176"
+              cy="416"
+              r="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="32"
+            />
+            <circle
+              cx="400"
+              cy="416"
+              r="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="32"
+            />
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="32"
+              d="M48 80h64l48 272h256"
+            />
+            <path
+              d="M160 288h249.44a8 8 0 007.85-6.43l28.8-144a8 8 0 00-7.85-9.57H128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="32"
+            />
+          </svg>
+        </a>
+      </nav>
+    </header>
+    <div class="cart hidden">
+      <p class="cart__empty-text">Cart is empty</p>
+      <!-- <div class="cart__item">
+        <figure class="cart__figure">
+          <img class="cart__image" src="#" alt="Product image" />
+        </figure>
+        <h4 class="cart__header">tekst</h4>
+      </div> -->
+    </div>
+    <div class="container">
+      <aside class="categories">
+        <h3 class="categories__header">Categories</h3>
+        <ul class="categories__list">
+          <!-- <li class="categories__item">
+            <a class="categories__link" href="#"></a>
+          </li> -->
+        </ul>
+      </aside>
+      <main class="products">
+        <!-- <div class="products__product-item">
+          <img class="products__image" src="#" alt="" />
+          <h4 class="products__title"></h4>
+          <p class="products__description"></p>
+          <p class="products__price"></p>
+          <button class="products__button">Add to cart</button>
+        </div> -->
+      </main>
+    </div>
+    <footer class="footer"></footer>
+    <div class="product"></div>
+  </body>
+</html>
