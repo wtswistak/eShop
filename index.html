@@ -20,9 +20,8 @@
         <a href="" class="header__link header__login">log in</a>
         <a href="#cart" class="header__link header__cart">
           <svg
-            class="header__cart-image"
+            class="header__cart-icon"
             xmlns="http://www.w3.org/2000/svg"
-            class="ionicon"
             viewBox="0 0 512 512"
           >
             <circle
@@ -66,6 +65,22 @@
       </nav>
     </header>
     <div class="cart hidden">
+      <a target="_self" class="cart__exit-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          class="header__cart-icon"
+        >
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="36"
+            d="M368 368L144 144M368 144L144 368"
+          />
+        </svg>
+      </a>
       <p class="cart__empty-text">Cart is empty</p>
       <!-- <div class="cart__item">
         <figure class="cart__figure">

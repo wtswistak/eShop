@@ -46,8 +46,14 @@
     display: flex;
     align-items: center;
   }
-  &__cart-image {
+  &__cart-icon {
     width: 2.4rem;
     height: 2.4rem;
+  }
+  @include breakpoint(large-tablet) {
+    padding: 1rem 3.2rem;
+  }
+  @include breakpoint(tablet) {
+    padding: 0.2rem 1.6rem;
   }
 }

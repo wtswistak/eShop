@@ -8,6 +8,7 @@
     flex-direction: column;
     row-gap: 1.6rem;
     max-height: 30vw;
+
     transition: 0.18s ease-in-out;
     &:hover {
       box-shadow: 0 0.8rem 2.8rem rgba(0, 0, 0, 0.085);
@@ -15,15 +16,16 @@
   }
 
   &__image {
-    width: 100%;
+    margin: 0 auto;
+    width: 80%;
     height: 50%;
     margin-bottom: 1.2rem;
   }
   &__title {
     font-size: 1.6rem;
     font-weight: 400;
-    // overflow: hidden;
-    // text-overflow: ellipsis;
+    line-height: 2rem;
+    margin-bottom: 2rem;
   }
   &__price-button-container {
     display: flex;
@@ -31,11 +33,13 @@
     justify-content: space-between;
   }
   &__price {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
   }
   &__button {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+
     background-color: #000;
     color: var(--header-text-color);
     padding: 0.8rem 1.6rem;
@@ -44,6 +48,58 @@
     }
     &:active {
       color: #e1e1e1;
+    }
+  }
+  @include breakpoint(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    &__product-item {
+      max-height: 40vw;
+      padding: 3rem 2.4rem;
+    }
+    &__price {
+      font-size: 1.8rem;
+    }
+  }
+  @include breakpoint(large-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    &__product-item {
+      max-height: 60vw;
+    }
+    &__price {
+      font-size: 1.6rem;
+    }
+    &__title {
+      font-size: 1.4rem;
+    }
+  }
+  @include breakpoint(tablet) {
+    gap: 0;
+    &__title {
+      margin-bottom: 1.2rem;
+    }
+    &__button {
+      padding: 0.6rem 1.2rem;
+    }
+    &__price {
+      font-size: 1.6rem;
+    }
+  }
+  @include breakpoint(mobile) {
+    &__product-item {
+      padding: 2rem 1.2rem;
+    }
+    &__price-button-container {
+      display: block;
+    }
+    &__title {
+      margin-bottom: 0;
+    }
+    &__price {
+      margin-bottom: 1.2rem;
+    }
+    &__product-item {
+      max-height: 60vh;
+      row-gap: 0.6rem;
     }
   }
 }

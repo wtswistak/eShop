@@ -3,8 +3,6 @@
   right: 0;
   z-index: 10;
   color: #000;
-  // border: 1px solid #000;
-  // border-top: none;
   box-shadow: 0 0 4px 0.6px #333333c0;
   margin-right: 1.2rem;
   background-color: #fff;
@@ -20,6 +18,7 @@
     display: flex;
     padding: 1.4rem 2.8rem;
     max-width: 30vw;
+    align-items: center;
     &:hover {
       background-color: var(--light-white-color);
     }
@@ -31,11 +30,35 @@
     width: 5.4rem;
     height: 5.4rem;
   }
-  &__header {
+  &__title {
     font-size: 1.4rem;
     font-weight: 400;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  &__exit-btn {
+    height: 2.4rem;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    padding: 0.6rem;
+    &:hover {
+      color: #777;
+      cursor: pointer;
+    }
+  }
+  @include breakpoint(large-tablet) {
+    &__item {
+      max-width: 40vw;
+    }
+  }
+  @include breakpoint(mobile) {
+    margin-right: 0;
+    width: 100%;
+    &__item {
+      max-width: 100%;
+    }
   }
 }

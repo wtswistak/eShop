@@ -1,11 +1,12 @@
 class CartView {
-  cartLink = document.querySelector(".header__cart");
+  cartBtn = document.querySelector(".header__cart");
   cartContainer = document.querySelector(".cart");
   productsContainer = document.querySelector(".products");
   emptyContainer = document.querySelector(".cart__empty-text");
+  exitBtn = document.querySelector(".cart__exit-btn");
 
-  cartLinkListener() {
-    this.cartLink.addEventListener("click", () => {
+  cartBtnListener() {
+    this.cartBtn.addEventListener("click", () => {
       this.cartContainer.classList.toggle("hidden");
     });
   }
@@ -14,7 +15,7 @@ class CartView {
   <figure class="cart__figure">
     <img class="cart__image" src="${product.image}" alt="Product image" />
   </figure>
-  <h4 class="cart__header">${product.title}</h4>
+  <h4 class="cart__title">${product.title}</h4>
 </div>`;
   }
   render(product) {
@@ -23,7 +24,7 @@ class CartView {
       this.createCartElement(product)
     );
   }
-  cartButtonListener(callback) {
+  productBtnListener(callback) {
     this.productsContainer.addEventListener("click", (e) => {
       const btn = e.target.closest(".products__button");
       if (!btn) return;
@@ -34,6 +35,11 @@ class CartView {
   }
   hideEmptyText() {
     this.emptyContainer.classList.add("hidden");
+  }
+  exitBtnListener() {
+    this.exitBtn.addEventListener("click", () => {
+      this.cartContainer.classList.add("hidden");
+    });
   }
 }
 

@@ -15,9 +15,10 @@ class Controller {
 
     this.view.render(products);
     this.categoriesView.render(categories);
-    this.cartView.cartLinkListener();
+    this.cartView.cartBtnListener();
+    this.cartView.exitBtnListener();
 
-    this.cartView.cartButtonListener((item) => {
+    this.cartView.productBtnListener((item) => {
       const cartProduct = this.model.getProductById(item, products);
       model.cartProducts.push(cartProduct);
 
@@ -33,4 +34,3 @@ class Controller {
 
 const controller = new Controller(model, view, categoriesView, cartView);
 controller.init();
-// controller.showCategories();
