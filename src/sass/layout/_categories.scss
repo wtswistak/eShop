@@ -32,12 +32,12 @@
     line-height: 2.4rem;
     padding-bottom: 0.8rem;
     &:visited,
-    :link {
+    &:link {
       color: #000;
     }
     &:hover,
-    :active {
-      color: green;
+    &:active {
+      color: #000;
       text-decoration: underline;
     }
   }

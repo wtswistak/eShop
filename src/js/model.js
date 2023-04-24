@@ -6,7 +6,6 @@ class ProductModel {
   async loadProducts() {
     try {
       const products = await getJSON(`${API_URL}`);
-      console.log(products);
 
       return products;
     } catch (error) {

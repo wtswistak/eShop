@@ -32,5 +32,15 @@ ul {
   list-style: none;
 }
 .hidden {
-  display: none;
+  display: none !important;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  height: 100%;
+  z-index: 20;
 }

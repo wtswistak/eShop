@@ -21,7 +21,7 @@ class CategoriesView {
   render(categories) {
     categories.map((category) =>
       this.parentElement.insertAdjacentHTML(
-        "beforeend",
+        "afterbegin",
         this.createCategoryElement(category)
       )
     );

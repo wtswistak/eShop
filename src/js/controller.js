@@ -2,12 +2,14 @@ import model from "./model";
 import view from "./views/view";
 import categoriesView from "./views/categoriesView";
 import cartView from "./views/cartView";
+import loginView from "./views/loginView";
 class Controller {
-  constructor(model, view, categoriesView, cartView) {
+  constructor(model, view, categoriesView, cartView, loginView) {
     this.model = model;
     this.view = view;
     this.categoriesView = categoriesView;
     this.cartView = cartView;
+    this.loginView = loginView;
   }
   async init() {
     const products = await this.model.loadProducts();
@@ -17,6 +19,8 @@ class Controller {
     this.categoriesView.render(categories);
     this.cartView.cartBtnListener();
     this.cartView.exitBtnListener();
+    this.loginView.exitLogin();
+    this.loginView.displayLogin();
 
     this.cartView.productBtnListener((item) => {
       const cartProduct = this.model.getProductById(item, products);
@@ -32,5 +36,11 @@ class Controller {
   }
 }
 
-const controller = new Controller(model, view, categoriesView, cartView);
+const controller = new Controller(
+  model,
+  view,
+  categoriesView,
+  cartView,
+  loginView
+);
 controller.init();

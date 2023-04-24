@@ -17,7 +17,7 @@
         <h2 class="header__name">eShop</h2>
       </a>
       <nav class="header__menu">
-        <a href="" class="header__link header__login">log in</a>
+        <a href="#login" class="header__link header__login">log in</a>
         <a href="#cart" class="header__link header__cart">
           <svg
             class="header__cart-icon"
@@ -109,6 +109,17 @@
       </main>
     </div>
     <footer class="footer"></footer>
-    <div class="product"></div>
+    <!-- <div class="product"></div> -->
+    <div class="overlay hidden"></div>
+    <div class="login hidden">
+      <h2 class="login__heading">Login Here</h2>
+      <form class="login__form">
+        <label class="login__label" for="login">Login</label>
+        <input class="login__input" id="login" type="text" />
+        <label class="login__label" for="password">Password</label>
+        <input class="login__input" id="password" type="password" />
+        <button class="login__btn">Log In</button>
+      </form>
+    </div>
   </body>
 </html>
