@@ -34,5 +34,8 @@ class ProductModel {
   getProductById(id, products) {
     return products.find((product) => product.id === id);
   }
+  getTotalCartPrice(products) {
+    return products.reduce((acc, curr) => acc + curr.price, 0);
+  }
 }
 export default new ProductModel();

@@ -4,6 +4,7 @@ class CartView {
   productsContainer = document.querySelector(".products");
   emptyContainer = document.querySelector(".cart__empty-text");
   exitBtn = document.querySelector(".cart__exit-btn");
+  totalPrice = document.querySelector(".cart__total-price");
 
   cartBtnListener() {
     this.cartBtn.addEventListener("click", () => {
@@ -20,7 +21,7 @@ class CartView {
   }
   render(product) {
     this.cartContainer.insertAdjacentHTML(
-      "beforeend",
+      "afterbegin",
       this.createCartElement(product)
     );
   }
@@ -34,12 +35,15 @@ class CartView {
     });
   }
   hideEmptyText() {
-    this.emptyContainer.classList.add("hidden");
+    this.emptyContainer.classList.add("none");
   }
   exitBtnListener() {
     this.exitBtn.addEventListener("click", () => {
       this.cartContainer.classList.add("hidden");
     });
+  }
+  updateTotalPrice(price) {
+    this.totalPrice.textContent = `$${price.toFixed(2)}`;
   }
 }
 

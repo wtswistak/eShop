@@ -19,6 +19,7 @@
     padding: 1.4rem 2.8rem;
     max-width: 30vw;
     align-items: center;
+    transition: all 0.2s;
     &:hover {
       background-color: var(--light-white-color);
     }
@@ -49,6 +50,15 @@
       cursor: pointer;
     }
   }
+  &__total {
+    font-size: 1.8rem;
+    padding: 1.4rem 2.8rem;
+    font-weight: 600;
+    border-top: 1px solid #e0e0e0d5;
+    display: flex;
+    justify-content: space-between;
+  }
+
   @include breakpoint(large-tablet) {
     &__item {
       max-width: 40vw;

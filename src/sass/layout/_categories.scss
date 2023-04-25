@@ -1,7 +1,8 @@
 .container {
   display: flex;
-  margin: 0 6.4rem;
+  margin: 6.7 6.4rem 8rem;
   margin-top: 6.7rem;
+
   @include breakpoint(large-tablet) {
     margin: 0 3.2rem;
     margin-top: 6.7rem;
@@ -31,6 +32,7 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     padding-bottom: 0.8rem;
+    transition: all 0.4s;
     &:visited,
     &:link {
       color: #000;
@@ -45,7 +47,7 @@
     padding-right: 0;
   }
   @include breakpoint(mobile) {
-    padding-bottom: 0;
+    margin-bottom: 4rem;
     &__header {
       display: none;
     }
@@ -59,7 +61,12 @@
       display: block;
       text-align: center;
       font-size: 1.4rem;
-      padding: 1rem 0;
+      padding: 1rem 0.2rem;
+      &:hover {
+        background-color: #ececec;
+        text-decoration: none;
+        border-radius: 5px;
+      }
     }
   }
 }
