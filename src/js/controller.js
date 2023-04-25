@@ -27,6 +27,7 @@ class Controller {
       model.cartProducts.push(cartProduct);
       const totalPrice = model.getTotalCartPrice(model.cartProducts);
       cartView.updateTotalPrice(totalPrice);
+      cartView.displayPriceBox();
 
       this.cartView.render(cartProduct);
       if (this.model.cartProducts) this.cartView.hideEmptyText();

@@ -5,6 +5,7 @@ class CartView {
   emptyContainer = document.querySelector(".cart__empty-text");
   exitBtn = document.querySelector(".cart__exit-btn");
   totalPrice = document.querySelector(".cart__total-price");
+  totalContainer = document.querySelector(".cart__total");
 
   cartBtnListener() {
     this.cartBtn.addEventListener("click", () => {
@@ -44,6 +45,9 @@ class CartView {
   }
   updateTotalPrice(price) {
     this.totalPrice.textContent = `$${price.toFixed(2)}`;
+  }
+  displayPriceBox() {
+    this.totalContainer.classList.remove("none");
   }
 }
 
