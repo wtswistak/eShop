@@ -3,6 +3,7 @@ import view from "./views/view";
 import categoriesView from "./views/categoriesView";
 import cartView from "./views/cartView";
 import loginView from "./views/loginView";
+
 class Controller {
   constructor(model, view, categoriesView, cartView, loginView) {
     this.model = model;
@@ -14,6 +15,8 @@ class Controller {
   async init() {
     const products = await this.model.loadProducts();
     const categories = await this.model.loadCategories();
+    const usersData = await this.model.loadUsersData();
+    console.log(usersData);
 
     this.view.render(products);
     this.categoriesView.render(categories);

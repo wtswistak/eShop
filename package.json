@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon src/js/server.js",
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },
@@ -11,6 +12,13 @@
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.22",
     "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mysql2": "^3.2.4"
   }
 }

@@ -1,4 +1,4 @@
-import { API_URL } from "./config";
+import { API_URL, DATABASE_URL } from "./config";
 import { getJSON } from "./helper";
 
 class ProductModel {
@@ -18,6 +18,15 @@ class ProductModel {
       const categories = await getJSON(`${API_URL}/categories`);
       categories.push("all products");
       return categories;
+    } catch (error) {
+      console.log(`${error}`);
+    }
+  }
+  async loadUsersData() {
+    try {
+      const usersData = await getJSON(`${DATABASE_URL}`);
+
+      return usersData;
     } catch (error) {
       console.log(`${error}`);
     }
