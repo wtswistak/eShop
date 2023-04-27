@@ -11,6 +11,7 @@ class CategoriesView {
     const categoriesElements = document.querySelectorAll(".categories__link");
     categoriesElements.forEach((categoryEl) => {
       categoryEl.addEventListener("click", (e) => {
+        e.preventDefault();
         const target = e.target.innerText;
         this.selectedCategory = target;
         callback(target);

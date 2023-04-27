@@ -16,14 +16,14 @@ class Controller {
     const products = await this.model.loadProducts();
     const categories = await this.model.loadCategories();
     const usersData = await this.model.loadUsersData();
-    console.log(usersData);
 
     this.view.render(products);
     this.categoriesView.render(categories);
-    this.cartView.cartBtnListener();
-    this.cartView.exitBtnListener();
-    this.loginView.exitLogin();
-    this.loginView.displayLogin();
+
+    this.categoriesView.categoriesListener((id) => {
+      const filterProducts = this.model.getProductsByCategory(id, products);
+      this.view.render(filterProducts);
+    });
 
     this.cartView.productBtnListener((item) => {
       const cartProduct = this.model.getProductById(item, products);
@@ -35,9 +35,17 @@ class Controller {
       this.cartView.render(cartProduct);
       if (this.model.cartProducts) this.cartView.hideEmptyText();
     });
-    this.categoriesView.categoriesListener((id) => {
-      const filterProducts = this.model.getProductsByCategory(id, products);
-      this.view.render(filterProducts);
+
+    this.cartView.cartBtnListener();
+    this.cartView.exitBtnListener();
+    this.loginView.overlayListener();
+    this.loginView.displayLogin();
+    this.loginView.displaySignupForm();
+
+    this.loginView.sendUserData();
+
+    this.loginView.loginBtnListener(() => {
+      this.loginView.compareLoginData(usersData);
     });
   }
 }

@@ -114,14 +114,50 @@
     <footer class="footer"></footer>
     <!-- <div class="product"></div> -->
     <div class="overlay hidden"></div>
-    <div class="login hidden">
-      <h2 class="login__heading">Login Here</h2>
-      <form class="login__form">
-        <label class="login__label" for="login">Login</label>
-        <input class="login__input" id="login" type="text" />
-        <label class="login__label" for="password">Password</label>
-        <input class="login__input" id="password" type="password" />
-        <button class="login__btn">Log In</button>
+    <div class="userform login-container hidden">
+      <h2 class="userform__heading">Login Here</h2>
+      <form class="login-form">
+        <label class="userform__label" for="login">Login</label>
+        <input class="userform__input" id="login" type="text" required />
+        <label class="userform__label" for="password">Password</label>
+        <input class="userform__input" id="password" type="password" required />
+        <p class="userform__incorrect-data hidden">
+          Incorrect username or password
+        </p>
+        <button class="userform__btn" type="submit">Login</button>
+        <p class="userform__signup">
+          Not a member?
+          <a class="userform__signup-link" href="#sign-up">Sign up</a>
+        </p>
+      </form>
+    </div>
+    <div class="userform signup-container hidden">
+      <h2 class="userform__heading">Sign Up</h2>
+      <form class="signup-form">
+        <label class="userform__label" for="login-signup">Login</label>
+        <input
+          class="userform__input"
+          id="login-signup"
+          type="text"
+          name="username"
+          required
+        />
+        <label class="userform__label" for="password-signup">Password</label>
+        <input
+          class="userform__input"
+          id="password-signup"
+          type="password"
+          name="password"
+          required
+        />
+        <label class="userform__label" for="email">Email</label>
+        <input class="userform__input" id="email" type="email" name="email" required />
+        <!-- <p class="register__incorrect-data hidden">
+          Incorrect username or password
+        </p> -->
+        <button class="userform__btn" type="submit">Register</button>
+        
+        </p>
       </form>
     </div>
   </body>
