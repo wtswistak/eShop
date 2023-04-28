@@ -13,6 +13,8 @@ class Controller {
     this.loginView = loginView;
   }
   async init() {
+    this.view.renderSpinner();
+
     const products = await this.model.loadProducts();
     const categories = await this.model.loadCategories();
     const usersData = await this.model.loadUsersData();

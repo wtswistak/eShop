@@ -31,6 +31,7 @@ class ProductModel {
       console.log(`${error}`);
     }
   }
+
   getProductsByCategory(category, products) {
     let filterProducts;
     category === "all products"

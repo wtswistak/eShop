@@ -50,3 +50,19 @@ ul {
   z-index: 20;
   transition: all 0.5s;
 }
+
+.spinner {
+  position: absolute;
+  text-align: center;
+  margin: 10rem 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  svg {
+    height: 9rem;
+    width: 9rem;
+    animation: rotate 2s infinite linear;
+  }
+}
+
+

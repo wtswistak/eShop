@@ -80,6 +80,7 @@ class LoginView {
       this.closeForm(this.signUpContainer);
     });
   }
+
   loginBtnListener(callback) {
     this.loginForm.addEventListener("submit", (e) => {
       e.preventDefault();
