@@ -47,6 +47,8 @@ class Controller {
     this.loginView.sendUserData();
 
     this.loginView.loginBtnListener(() => {
+      if (!usersData)
+        this.loginView.incorrectElement.classList.remove("hidden");
       this.loginView.compareLoginData(usersData);
     });
   }

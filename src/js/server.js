@@ -7,10 +7,10 @@ const bodyParser = require("body-parser");
 const app = express();
 
 const pool = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "eshop_data",
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE,
 });
 
 app.get("", function (req, res) {
