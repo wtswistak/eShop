@@ -1,4 +1,4 @@
-import { API_URL, DATABASE_URL } from "./config";
+import { API_URL, SERVER_URL } from "./config";
 import { getJSON } from "./helper";
 
 class ProductModel {
@@ -24,7 +24,7 @@ class ProductModel {
   }
   async loadUsersData() {
     try {
-      const usersData = await getJSON(`${DATABASE_URL}`);
+      const usersData = await getJSON(`${SERVER_URL}`);
 
       return usersData;
     } catch (error) {
