@@ -11,7 +11,7 @@ class LoginView {
   incorrectElement = document.querySelector(".userform__incorrect-data");
 
   signupForm = document.querySelector(".signup-form");
-  exitBtn = document.querySelector(".userform__exit-btn");
+  exitBtns = document.querySelectorAll(".userform__exit-btn");
 
   displayLogin() {
     this.loginLink.addEventListener("click", () => {
@@ -86,10 +86,12 @@ class LoginView {
     this.closeForm(this.loginContainer);
     this.closeForm(this.signUpContainer);
   }
-  exitbBtnListener() {
-    this.exitBtn.addEventListener("click", () => {
-      this.exitForm();
-    });
+  exitbBtnsListener() {
+    this.exitBtns.forEach((btn) =>
+      btn.addEventListener("click", () => {
+        this.exitForm();
+      })
+    );
   }
   overlayListener() {
     this.overlayContainer.addEventListener("click", () => {
