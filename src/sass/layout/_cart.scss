@@ -13,6 +13,7 @@
     font-size: 1.6rem;
     font-weight: 400;
     padding: 3rem 6rem;
+    text-align: center;
   }
   &__item {
     display: flex;
@@ -39,16 +40,12 @@
     text-overflow: ellipsis;
   }
   &__exit-btn {
-    height: 2.4rem;
-    position: absolute;
-    display: block;
-    top: 0;
-    right: 0;
-    padding: 0.6rem;
-    &:hover {
-      color: #777;
-      cursor: pointer;
-    }
+    top: 0.5rem;
+    right: 0.5rem;
+    @include exit-btn();
+  }
+  &__exit-icon {
+    @include exit-icon();
   }
   &__total {
     font-size: 1.8rem;

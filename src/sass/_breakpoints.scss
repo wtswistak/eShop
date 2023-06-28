@@ -1,7 +1,7 @@
 $mobile: 39em;
 $tablet: 48em;
 $large-tablet: 64em;
-$desktop: 85em;
+$desktop: 87.5em;
 
 @mixin breakpoint($breakpoint) {
   @if $breakpoint == mobile {

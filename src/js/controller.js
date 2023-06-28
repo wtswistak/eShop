@@ -41,6 +41,7 @@ class Controller {
     this.cartView.cartBtnListener();
     this.cartView.exitBtnListener();
     this.loginView.overlayListener();
+    this.loginView.exitbBtnListener();
     this.loginView.displayLogin();
     this.loginView.displaySignupForm();
 

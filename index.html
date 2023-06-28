@@ -69,7 +69,7 @@
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
-          class="header__cart-icon"
+          class="cart__exit-icon"
         >
           <path
             fill="none"
@@ -115,7 +115,23 @@
     <!-- <div class="product"></div> -->
     <div class="overlay hidden"></div>
     <div class="userform login-container hidden">
-      <h2 class="userform__heading">Login Here</h2>
+      <h2 class="userform__heading">Login Here 
+        <a target="_self" class="userform__exit-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          class="userform__exit-icon"
+        >
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="36"
+            d="M368 368L144 144M368 144L144 368"
+          />
+        </svg>
+      </a></h2>
       <form class="login-form">
         <label class="userform__label" for="login">Login</label>
         <input class="userform__input" id="login" type="text" required />
@@ -130,6 +146,7 @@
           <a class="userform__signup-link" href="#sign-up">Sign up</a>
         </p>
       </form>
+     
     </div>
     <div class="userform signup-container hidden">
       <h2 class="userform__heading">Sign Up</h2>

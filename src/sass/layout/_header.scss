@@ -40,7 +40,8 @@
     padding: 1rem 0.6rem;
   }
   &__link:hover,
-  :active {
+  :active,
+  :focus-within {
     color: #999;
   }
   &__cart {

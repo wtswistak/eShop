@@ -3,17 +3,22 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 40rem;
+  width: 48rem;
   transform: translate(-50%, -50%);
-
   background-color: #fff;
-  padding: 6rem 6rem 10rem;
+  padding: 8rem 7rem 12rem;
   border-radius: 6px;
   display: grid;
+
   &__heading {
+    position: relative;
     text-align: center;
     font-size: 2.8rem;
     margin-bottom: 3.8rem;
+    margin-top: auto;
+    @include breakpoint(mobile) {
+      margin-bottom: 6.8rem;
+    }
   }
   &__label {
     display: block;
@@ -69,6 +74,14 @@
       border-bottom: 1px solid #006600;
     }
   }
+  &__exit-btn {
+    top: 0;
+    right: -4rem;
+    @include exit-btn();
+  }
+  &__exit-icon {
+    @include exit-icon();
+  }
   @include breakpoint(mobile) {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -76,6 +89,7 @@
     left: 0;
     transform: none;
     width: 100%;
-    min-height: 65vh;
+    height: 100%;
+    padding: 8rem 5rem 12rem;
   }
 }
