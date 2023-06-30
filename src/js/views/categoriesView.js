@@ -9,11 +9,21 @@ class CategoriesView {
   }
   categoriesListener(callback) {
     const categoriesElements = document.querySelectorAll(".categories__link");
+    categoriesElements[0].classList.add("underline");
     categoriesElements.forEach((categoryEl) => {
       categoryEl.addEventListener("click", (e) => {
         e.preventDefault();
         const target = e.target.innerText;
-        this.selectedCategory = target;
+        this.selectedCategory = e.target;
+
+        this.selectedCategory.classList.add("underline");
+
+        // Iterowanie po pozostałych elementach i dodawanie stylu "text-decoration: none"
+        categoriesElements.forEach((el) => {
+          if (el !== this.selectedCategory) {
+            el.classList.remove("underline");
+          }
+        });
         callback(target);
       });
     });
