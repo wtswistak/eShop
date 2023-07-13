@@ -44,6 +44,7 @@ class Controller {
     this.loginView.exitbBtnsListener();
     this.loginView.displayLogin();
     this.loginView.displaySignupForm();
+    this.loginView.backBtnHandle();
 
     this.loginView.sendUserData();
 

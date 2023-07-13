@@ -18,7 +18,6 @@ class CategoriesView {
 
         this.selectedCategory.classList.add("underline");
 
-        // Iterowanie po pozostałych elementach i dodawanie stylu "text-decoration: none"
         categoriesElements.forEach((el) => {
           if (el !== this.selectedCategory) {
             el.classList.remove("underline");

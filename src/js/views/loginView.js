@@ -12,6 +12,7 @@ class LoginView {
 
   signupForm = document.querySelector(".signup-form");
   exitBtns = document.querySelectorAll(".userform__exit-btn");
+  backBtn = document.querySelector(".userform__back-btn");
 
   displayLogin() {
     this.loginLink.addEventListener("click", () => {
@@ -42,13 +43,11 @@ class LoginView {
   }
   displaySignupForm() {
     this.signUpLink.addEventListener("click", () => {
-      this.loginContainer.classList.add("hidden");
       this.signUpContainer.classList.remove("hidden");
     });
   }
   sendUserData() {
     this.signupForm.addEventListener("submit", (e) => {
-      // e.preventDefault();
       const username = document.getElementById("login-signup").value;
       const password = document.getElementById("password-signup").value;
       const email = document.getElementById("email").value;
@@ -96,6 +95,11 @@ class LoginView {
   overlayListener() {
     this.overlayContainer.addEventListener("click", () => {
       this.exitForm();
+    });
+  }
+  backBtnHandle() {
+    this.backBtn.addEventListener("click", () => {
+      this.closeForm(this.signUpContainer);
     });
   }
 }

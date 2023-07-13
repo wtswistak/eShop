@@ -79,8 +79,17 @@
     right: -4rem;
     @include exit-btn();
   }
+  &__back-btn {
+    top: 0.3rem;
+    left: -4rem;
+    @include exit-btn();
+  }
   &__exit-icon {
     @include exit-icon();
+  }
+  &__back-icon {
+    width: 2.6rem;
+    height: 2.6rem;
   }
   @include breakpoint(mobile) {
     border-top-left-radius: 0;
